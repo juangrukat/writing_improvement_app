@@ -1,5 +1,7 @@
 # Writing Improvement App
 
+![screenshot](Screenshot.png)
+
 A desktop application built with Python and Tkinter to help users improve their writing through sentence rewriting practice.
 
 ## Features
