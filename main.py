@@ -137,8 +137,8 @@ class WritingAppView:
     def __init__(self, root):
         self.root = root
         self.root.title("Writing Improvement App")
-        self.root.geometry("800x600")
-        self.root.minsize(600, 400)
+        self.root.geometry("900x700")
+        self.root.minsize(700, 500)
         
         self._setup_styles()
         self._create_widgets()
@@ -147,9 +147,9 @@ class WritingAppView:
         """Configure ttk styles."""
         style = ttk.Style()
         style.configure("TFrame", background="#f0f0f0")
-        style.configure("TLabel", background="#f0f0f0", font=("Helvetica", 11))
-        style.configure("TButton", font=("Helvetica", 10))
-        style.configure("Title.TLabel", font=("Helvetica", 14, "bold"))
+        style.configure("TLabel", background="#f0f0f0", font=("Helvetica", 13))
+        style.configure("TButton", font=("Helvetica", 12))
+        style.configure("Title.TLabel", font=("Helvetica", 16, "bold"))
     
     def _create_widgets(self):
         """Create all UI widgets."""
@@ -178,16 +178,16 @@ class WritingAppView:
         
         ttk.Label(sentence_frame, text="Original Sentence:").grid(row=0, column=0, sticky=tk.W, pady=(0, 5))
         
-        self.sentence_text = tk.Text(sentence_frame, height=4, width=60, wrap=tk.WORD, 
-                                   font=("Helvetica", 11), relief=tk.FLAT, bg="#f8f8f8")
+        self.sentence_text = tk.Text(sentence_frame, height=6, width=70, wrap=tk.WORD, 
+                                   font=("Helvetica", 13), relief=tk.FLAT, bg="#f8f8f8")
         self.sentence_text.grid(row=1, column=0, sticky=(tk.W, tk.E), pady=(0, 10))
         self.sentence_text.config(state=tk.DISABLED)
         
         # Rewrite input
         ttk.Label(sentence_frame, text="Your Rewrite:").grid(row=2, column=0, sticky=tk.W, pady=(0, 5))
         
-        self.rewrite_text = tk.Text(sentence_frame, height=6, width=60, wrap=tk.WORD, 
-                                  font=("Helvetica", 11))
+        self.rewrite_text = tk.Text(sentence_frame, height=8, width=70, wrap=tk.WORD, 
+                                  font=("Helvetica", 13))
         self.rewrite_text.grid(row=3, column=0, sticky=(tk.W, tk.E, tk.N, tk.S))
         
         # Button frame
